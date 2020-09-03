@@ -21,6 +21,7 @@ body{
     display: block;
 }
 .col{
+    position: relative;
     float: left;
     display: block;
     width: 60px;
