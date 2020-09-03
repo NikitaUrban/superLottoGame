@@ -6,10 +6,16 @@ $(function () {
     startGameBtn.click(function () {
         $(this).prop('disabled',true)
         randomNumberBtn.prop('disabled',false)
+        let arr = []
+        while (arr.length < 30){
+            let randomNumber = Math.floor(Math.random() * 90) + 1
+            if (arr.indexOf(randomNumber) === -1){
+                arr.push(randomNumber)
+            }
+        }
         let cols = $('.wrap .col')
-        cols.each(function () {
-            let n = Math.floor(Math.random() * 90) + 1
-            $(this).html(n)
+        cols.each(function (index) {
+            $(this).html(arr[index])
         })
 
     })
