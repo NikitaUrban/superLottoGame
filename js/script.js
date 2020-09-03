@@ -15,7 +15,7 @@ $(function () {
         }
         let cols = $('.wrap .col')
         cols.each(function (index) {
-            $(this).html(arr[index])
+            $(this).html('<div class="pos">' + arr[index] + '</div>')
         })
 
     })
