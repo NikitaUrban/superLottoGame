@@ -1,0 +1,50 @@
+body{
+    background-color: #f4f4f4;
+}
+
+#supperLotto{
+    text-align: center;
+}
+
+.wrap{
+    width: 450px;
+    height: 450px;
+    display: block;
+    margin: 40px auto;
+    padding: 0;
+
+
+}
+
+.row{
+    height: 60px;
+    display: block;
+}
+.col{
+    float: left;
+    display: block;
+    width: 60px;
+    height: 100%;
+    border: 3px solid black;
+}
+
+#startGeneration,#randomNumber{
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 30px;
+    background-color: #f42267;
+    border: none;
+    color: #fff;
+    opacity: .7;
+    transition: all .5s;
+}
+#startGeneration:hover,#randomNumber:hover{
+    color: #fff;
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+
+
