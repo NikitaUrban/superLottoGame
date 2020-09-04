@@ -1,4 +1,4 @@
-$(function () {
+
 
     let startGameBtn = $('#startGeneration')//кнопка генерирования случайных чисел в лотерейном билете
     let randomNumberBtn = $('#randomNumber')//кнопка для зачеркивания номера в билете
@@ -21,12 +21,16 @@ $(function () {
     })
 
     randomNumberBtn.click(function () {
-        let $cols = $('.wrap .col .pos')
-        let arr = []
-        $cols.each(function () {
-            arr.push(Number($(this).html()))
+        let $cols = $('.col .pos')
+        let randomNumber = Math.floor(Math.random() * 90) + 1//как-то сделать чтобы боченки не повторялись
+        $.each($cols,function () {
+            if (randomNumber === Number($(this).html())) {
+                alert('Есть ' + randomNumber)
+                $(this).parent().addClass('crossed')
+            }/*else {
+                alert('Нет ' + randomNumber)
+                return false
+            }*/
         })
-        let randomNumber = Math.floor(Math.random() * 90) + 1
 
     })
-})

@@ -46,6 +46,10 @@ body{
     font-size: 20px;
 }
 
+.crossed{
+    background-color: green;
+}
+
 @media only screen and (max-width : 405px){
     .wrap{
         width: 345px;
