@@ -26,16 +26,15 @@
         })
         randomNumberBtn.click(function () {
 
-            let $cols = $('.col .pos')
-            let randomNumber = Math.floor(Math.random() * 90) + 1//как-то сделать чтобы боченки не повторялись
-            $.each($cols,function () {
-                if (randomNumber === Number($(this).html())) {
-                    alert('Есть ' + randomNumber)
-                    $(this).parent().addClass('crossed')
-                }/*else {
-                alert('Нет ' + randomNumber)
-                return false
-            }*/
+            for (let i = 0 ; i < randomNumberArr.length ; i++){
+                let a = $.inArray(randomNumberArr[i],arr)
+                if (a > -1){
+                    alert('Есть ' + randomNumberArr[i])
+                    $('.col:eq(a)').addClass('crossed')
+                    break
+                }
+                alert('Нет ' + randomNumberArr[i])
+            }
             })
-        })
+
 
