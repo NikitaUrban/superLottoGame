@@ -4,13 +4,13 @@ let counter2 = 0//счетчик для поля, если он больше 30 
     let randomNumberBtn = $('#randomNumber')//кнопка для зачеркивания номера в билете
     let cols = $('.wrap .col')
     let arr = []//массив для дальнейшего создания лотерейного билета
-    let randomNumberArr = []
+    let randomNumberArr = [] // массив для боченков(когда перемешали мешок с боченками)
         randomNumberBtn.prop('disabled',true)
         startGameBtn.click(function () {
             $(this).prop('disabled',true)
             randomNumberBtn.prop('disabled',false)
-            arr = []//очищаем arr
-            randomNumberArr = [] //randomNumberArr
+            arr = []//очищаем массив лотерейного билета
+            randomNumberArr = [] //очищаем массив боченков
             counter2 = 0//обнуляем счетчик поля
             counter = 0//обнуляем счетчик ходов
             cols.removeClass('crossed')
