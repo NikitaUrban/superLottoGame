@@ -38,6 +38,7 @@ let counter2 = 0//счетчик для поля, если он больше 30 
                        alert('Есть ' + randomNumberArr[counter])
                        cols.eq(a).addClass('crossed')
                    }else {
+                       alert('Есть ' + randomNumberArr[counter])
                        cols.eq(a).addClass('crossed')
                        alert('Вы победили за ' + (counter + 1) + ' ходов!')
                        startGameBtn.prop('disabled',false)
