@@ -1,4 +1,4 @@
-
+    let counter = 0//счетчик для кнопки randomBtn
     let startGameBtn = $('#startGeneration')//кнопка генерирования случайных чисел в лотерейном билете
     let randomNumberBtn = $('#randomNumber')//кнопка для зачеркивания номера в билете
     let cols = $('.wrap .col')
@@ -25,18 +25,15 @@
             })
         })
         randomNumberBtn.click(function () {
-            let flag = false
-            for (let i = 0 ; i < randomNumberArr.length ; i++) {
-                let cache = randomNumberArr[i]
-                let a = $.inArray(cache, arr)
+                let a = $.inArray(randomNumberArr[counter], arr)
                 if (a > -1){
-                    alert('Есть' + cache)
+                    alert('Есть ' + randomNumberArr[counter])
                     cols.eq(a).addClass('crossed')
-                    break
-                }
-            alert('Нет ' + cache)
-            }
 
+                }else {
+                    alert('Нет ' + randomNumberArr[counter])
+                }
+                counter++
         })
 
 
