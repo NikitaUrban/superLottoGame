@@ -25,16 +25,19 @@
             })
         })
         randomNumberBtn.click(function () {
-
+            let $cols = $('.pos')
             for (let i = 0 ; i < randomNumberArr.length ; i++){
-                let a = $.inArray(randomNumberArr[i],arr)
-                if (a > -1){
-                    alert('Есть ' + randomNumberArr[i])
-                    $('.col:eq(a)').addClass('crossed')
-                    break
-                }
-                alert('Нет ' + randomNumberArr[i])
+                let cache = randomNumberArr[i]
+                $.each($cols,function () {
+                        if (cache === Number($(this).html())){
+                            alert('Есть ' + cache)
+                            $(this).parent().addClass('crossed')
+                        }
+                       return false
+                })
+
             }
-            })
+
+        })
 
 
